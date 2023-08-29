@@ -6,6 +6,10 @@ min = max = var
 
 while var != '':
 
+    var = float(var)
+    min = float(min)
+    max = float(max)
+
     if var < min:
         min = var
 
