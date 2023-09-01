@@ -8,7 +8,7 @@ merkkijen_jono = []
 
 while True:
     try:
-        var = float(var)
+        float(var)
         # append = lisays
         merkkijen_jono.append(var)
         var = input('Anna seurava luku: ')

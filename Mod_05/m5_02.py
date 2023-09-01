@@ -3,8 +3,7 @@ number_list = []
 luku = input('Anna joku luku tai "Enter" lupuksi: ')
 
 while luku != '':
-    luku = int(luku)
-    number_list.append(luku)
+    number_list.append(int(luku))
     luku = input('Anna joku luku tai "Enter" lupuksi: ')
 
 print(number_list)
