@@ -1,14 +1,26 @@
-var = int(input('Anna joku luku: '))
-i = var - 1
 list = []
+var = input('Anna joku luku: ')
 
-while i != 1:
-    list.append( var % i )
-    i -= 1
+while var != '':
 
-print(list)
+    # pikku - "käyttäjat joskus ovat väärässä"
+    try:
+        var = int(var)
+        i = var - 1
 
-if 0 in list:
-    print('shity shit')
-else:
-    print('luku on alkuluku')
+    #   while i != 1 or i != 0:
+        while i not in {1, 0}:
+            list.append(var % i)
+            i -= 1
+        if 0 in list:
+            print('-luku ei ole alkuluku\n')
+        else:
+            print('-luku on alkuluku\n')
+
+        var = input('Seurava luku tai "Enter" sulkumiseen: ')
+
+    except ValueError:
+        print(f'"{var}" - ei ole luku\n')
+        var = input('Seurava luku tai "Enter" sulkumiseen: ')
+
+print('Näkemiin!')
