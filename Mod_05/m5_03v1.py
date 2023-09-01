@@ -5,16 +5,18 @@ while var != '':
     # pikku - "käyttäjat joskus ovat väärässä"
     try:
         var = int(var)
-        i = var - 1
+        i = 2
         list = []
 
-    #   while i != 1 or i != 0:
-        while i not in {1, 0}:
+        while i != var and var != 1:
             list.append(var % i)
-            i -= 1
-        if 0 in list:
-            print('-luku ei ole alkuluku\n')
-        else:
+            i += 1
+
+            if 0 in list:
+                print('-luku ei ole alkuluku\n')
+                break
+
+        if 0 not in list:
             print('-luku on alkuluku\n')
 
         var = input('Seurava luku tai "Enter" sulkumiseen: ')
