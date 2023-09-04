@@ -1,6 +1,7 @@
-clss = input('Terve, kerro sun laivan hyttiluokan: ')
+clss = input('Terve, kerro sun laivan hyttiluokan: ') # .upper() / .lower()
+# clss = clss.lower()
 
-if clss == 'Lux' or clss == 'LUX' or clss =='lux':
+if clss.lower() == 'lux':
     print('LUX on parvekkeellinen hytti yläkannella.')
 elif clss == 'A' or clss =='a':
     print('A on ikkunallinen hytti autokannen yläpuolella.')
