@@ -1,3 +1,5 @@
+import math
+
 var = input('Anna joku luku: ')
 
 while var != '':
@@ -5,8 +7,9 @@ while var != '':
     # pikku - "käyttäjat joskus ovat väärässä"
     try:
         var = int(var)
+        loppu = int((var ** 0.5) + 1)
 
-        for i in range(2,var):
+        for i in range(2, loppu):
             if var % i == 0:
                 print('-luku ei ole alkuluku\n')
                 var = 'luku'
