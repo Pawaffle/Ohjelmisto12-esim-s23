@@ -6,7 +6,10 @@ while luku != '':
     number_list.append(int(luku))
     luku = input('Anna joku luku tai "Enter" lupuksi: ')
 
-print(number_list)
+#print(number_list)
 number_list.sort(reverse=True)
-print((number_list))
+#print((number_list))
 print(number_list[:5])
+
+# * poista [sulut] , sep= 'lisää jotain olioihin välissä'
+#print(*number_list[:5], sep=' ja ')
