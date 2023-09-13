@@ -6,6 +6,7 @@ minun_monikko2 = 1, 2, (3, 4), 5, 6
 
 minun_string = '123456'
 
+'''
 # listan voi muokata
 minun_lista [0] = 0
 print(minun_lista)
@@ -18,3 +19,45 @@ viikonpäivät = ("maanantai", "tiistai", "keskiviikko", "torstai", "perjantai",
 järjestysnumero = int(input("Anna viikonpäivän järjestysnumero (1-7): "))
 viikonpäivä = viikonpäivät[järjestysnumero-1]
 print (f"{järjestysnumero}. viikonpäivä on {viikonpäivä}.")
+
+
+minun_set = {'Monopoly', 'Shakki', 'Cluedo'}
+print(minun_set)
+
+minun_set.add('Riski')
+print(minun_set)
+'''
+
+
+# sanakirja
+########################
+
+oppilat = {'Aapeli': 25, 'Bertta': 45, 'Cecilia': 16}
+
+# avaimet
+for i in oppilat:
+    print(i)
+
+print()
+
+# arvot
+for i in oppilat:
+    print(oppilat[i])
+
+print()
+
+# tiettuet - items
+print(oppilat.items())
+
+print(oppilat.keys())
+print(oppilat.values())
+
+oppilat['aaa'] = 10
+# del oppilat['aaa']
+numero_talteen = oppilat.pop('aaa')
+print(numero_talteen)
+'''
+
+monikko_listassa = [1, 2, 3, (4, 5), 6, 7]
+lista_monikossa = (1, 2, 3, [4, 5], 6, 7)
+'''
