@@ -26,7 +26,6 @@ print(minun_set)
 
 minun_set.add('Riski')
 print(minun_set)
-'''
 
 
 # sanakirja
@@ -56,8 +55,20 @@ oppilat['aaa'] = 10
 # del oppilat['aaa']
 numero_talteen = oppilat.pop('aaa')
 print(numero_talteen)
-'''
 
 monikko_listassa = [1, 2, 3, (4, 5), 6, 7]
 lista_monikossa = (1, 2, 3, [4, 5], 6, 7)
 '''
+
+def main():
+    months = ("tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu", "heinäkuu", "elokuu", "syyskuu",
+              "lokakuu", "marraskuu", "joulukuu")
+    seasons = ("talvikuukasi", "kevätkuukausi", "kesäkuukausi", "syyskuukausi")
+    print("Valitse monesko kuukausi:")
+
+mii(['hello world','hello','hello cat','hellolot of cats']) == {'hello': {0, 1, 2},
+                                                                'cat': {2},
+                                                                'of': {3},
+                                                                'world': {0},
+                                                                'cats': {3},
+                                                                'hellolot': {3}}
