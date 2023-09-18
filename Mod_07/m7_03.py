@@ -1,25 +1,37 @@
 airports = {}
 
+
 ########################################################################################
 
 def delete():
-    print('perkele')
+    poistava = input('Mitä haluat poista? Anna ICAO koodin: ')
+    if poistava in airports:
+        talteen = airports.pop(poistava)
+        # del airports[poistava]
+        print(f'{poistava}-{talteen} poistettu')
+    else:
+        print(f'Lentoasem {poistava} Ei löydyy')
+
 
 def add():
     ICAO = input('Anna ICAO koodin: ')
     airport_name = input('Anna lentoaseman nimen: ')
     airports[ICAO] = airport_name
 
+
 def find():
-    number = input('mikä nimi haluat poista?: ')
-    if number in airports:
-        airports.remove(number)
-        print(number, 'on poistettu')
-    else:
-        print('Sellaista nimea ei löyty')
+    lento = input('Mitä asema olet etsimässä? Anna ICAO: ')
+    print(airports.get(lento, 'EI LÖYDY'))
+
+
+def list():
+    for i in airports:
+        print(f'{i} - {airports[i]}')
+
 
 def commands():
-    command = ['', 'Add', 'Find', 'Delete', 'Exit']
+    command = ['', 'Add', 'Find', 'Delete', 'List', 'Exit']
+    print()
     for i, c in enumerate(command):
         if i > 0:
             print(f'{i}) {c}')
@@ -34,7 +46,7 @@ commands()
 number = input('\nAnna sopivan komennon numero: ')
 print()
 
-while number  != '4':
+while number != '5':
 
     if number == '1':
         add()
@@ -42,15 +54,13 @@ while number  != '4':
         find()
     elif number == '3':
         delete()
-    elif number == 'lista':
-        for i in airports:
-            print(f'{i} - {airports[i]}')
+    elif number == '4':
+        list()
 
     commands()
     number = input('\nAnna sopivan komennon numero: ')
     print()
 
-'''
-print(f'Sinä olet lisännyt {len(airports)} nimea.')
-print(f'Tässä ne on: {(airports)}')
-'''
+print('Tässä on talennetut lentoasemat: ')
+list()
+print('Näkemiin')
