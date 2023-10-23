@@ -6,7 +6,7 @@ class Auto:
         self.max_speed = huippunopeus
 
     def lisätään_nopeutta(self,nopeus):
-        if self.speed + nopeus > 0:
+        if self.speed + nopeus > self.max_speed:
             self.speed = self.max_speed
         elif self.speed + nopeus < 0:
             self.speed = 0
