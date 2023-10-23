@@ -45,4 +45,4 @@ kilpailu.sort(key=lambda x: x.dist, reverse=True)
 for car in kilpailu:
     print(f'\nAuto, jonka rekisterinumero on {car.reg_plate}, ajoi maaliin numerolla {kilpailu.index(car) + 1} \n'
           f'Sen huippunopeus oli {car.max_speed} km/t \n'
-          f'Nykyhetkinen nopeus on {car.speed} km/t ja ajettu matka {car.dist} km/t')
+          f'Nykyhetkinen nopeus on {car.speed} km/t ja ajettu matka {car.dist} km')
