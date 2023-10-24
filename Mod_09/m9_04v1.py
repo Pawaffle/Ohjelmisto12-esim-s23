@@ -1,6 +1,7 @@
 import random, string
 under_10000 = True
 race = []
+finish = []
 
 def random_char(y):
     return ''.join(random.choice(string.ascii_uppercase) for x in range(y))
@@ -9,6 +10,7 @@ def random_char(y):
 class Auto:
     speed = 0
     dist = 0
+    time = 0
     def __init__(self, num_plate, max_speed):
         self.reg_plate = num_plate
         self.max_speed = max_speed
@@ -23,24 +25,31 @@ class Auto:
 
     def drive(self, time):
         self.dist += (time * self.speed)
+        self.time += time
 
 
 for i in range (1,11):
     plate = random_char(3) + '-' + str(i)
-    new_car = Auto(plate, random.randint(100,200))
+    new_car = Auto(plate, random.randint(100, 200))
     race.append(new_car)
-    #print(f'Rekisteritunnus: {new_car.reg_plate} ja huippunopeus: {new_car.max_speed} km/t')
 
-while under_10000:
+while len(race) > 0:
     for car in race:
         car.accelerate(random.randint(-10, 15))
         car.drive(1)
         if car.dist >= 10000:
-            under_10000 = False
+            finish.append(car)
+            race.remove(car)
 
-race.sort(key=lambda x: x.dist, reverse=True)
+finish.sort(key=lambda x: x.time, reverse=False)
 
-for car in race:
-    print(f'\nAuto, jonka rekisterinumero on {car.reg_plate}, ajoi maaliin numerolla {race.index(car) + 1} \n'
+for car in finish:
+    print(f'\nAuto, jonka rekisterinumero on {car.reg_plate}, ajoi maaliin numerolla {finish.index(car) + 1} \n'
           f'Sen huippunopeus oli {car.max_speed} km/t \n'
-          f'Nykyhetkinen nopeus on {car.speed} km/t ja ajettu matka {car.dist} km')
+          f'Auton ajettu matka {car.dist} km se on suorittu {car.time}:ssa tunnissa')
+
+'''
+car_name = 'car_' + str(i)
+    new_car = Auto(plate, random.randint(100,200))
+    race[car_name] = new_car
+'''
