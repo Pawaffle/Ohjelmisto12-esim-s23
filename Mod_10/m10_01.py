@@ -4,7 +4,7 @@ import time
 def slow_print(text):
     for x in text:
         print(x, end='', flush=True)
-        time.sleep(0.05)
+        time.sleep(0.1)
 
 
 class Hissi:
