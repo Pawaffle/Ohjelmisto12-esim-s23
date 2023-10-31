@@ -25,7 +25,7 @@ class Talo:
     def __init__(self, alla, ylla, h_määrä):
         self.alakerros = alla
         self.ylakerros = ylla
-        for x in range (h_määrä):
+        for x in range(h_määrä):
             h_name = 'hissi ' + raput[x]
             hissi = Hissi(alla, ylla, h_name)
             self.hissit[h_name] = hissi

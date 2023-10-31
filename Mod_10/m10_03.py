@@ -111,7 +111,7 @@ def main():
 alin_kerros = 0
 ylin_kerros = 10
 hissien_määrä = 5
-pelin_toistoen_määrä = 1
+pelin_toistoen_määrä = 10
 
 ###############################
 main()
